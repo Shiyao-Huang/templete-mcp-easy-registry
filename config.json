@@ -1,0 +1,38 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8080,
+    "name": "MCP示例服务器",
+    "description": "基于插件的MCP服务器示例"
+  },
+  
+  "file_resource": {
+    "base_dir": "./data",
+    "allowed_extensions": [".txt", ".md", ".json", ".yaml", ".yml"]
+  },
+  
+  "tool_configs": {
+    "bash": {
+      "enabled": true,
+      "allowed_commands": ["ls", "cat", "echo", "grep", "find", "pwd", "mkdir", "touch"]
+    },
+    
+    "web_search": {
+      "default_engine": "google",
+      "max_results": 5,
+      "timeout": 15
+    }
+  },
+  
+  "custom_sampler": {
+    "default_temperature": 0.7,
+    "default_max_tokens": 1000
+  },
+  
+  "logging": {
+    "level": "INFO",
+    "file": "mcp_server.log",
+    "max_size": 10485760,
+    "backup_count": 5
+  }
+} 

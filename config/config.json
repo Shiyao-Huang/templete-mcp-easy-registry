@@ -1,0 +1,32 @@
+{
+  "server": {
+    "name": "template-mcp",
+    "transport": "stdio",
+    "log_level": "info",
+    "debug": true
+  },
+  "plugins": {
+    "directories": {
+      "resources": "plugins/resources",
+      "prompts": "plugins/prompts",
+      "tools": "plugins/tools",
+      "sampling": "plugins/sampling"
+    },
+    "hot_reload": true,
+    "disabled": []
+  },
+  "sampling": {
+    "default_model": "gpt-3.5-turbo",
+    "api_key": "${OPENAI_API_KEY}"
+  },
+  "tool_configs": {
+    "bash": {
+      "enabled": true,
+      "allowed_commands": ["ls", "cat", "echo", "grep", "find"]
+    },
+    "file_resource": {
+      "base_path": "./data",
+      "allowed_extensions": [".txt", ".md", ".json", ".py"]
+    }
+  }
+} 

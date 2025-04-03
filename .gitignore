@@ -1,0 +1,37 @@
+# Python字节码
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.env
+
+# 日志文件
+*.log
+mcp_server.log*
+
+# 编辑器配置
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.bak
+*.tmp
+*~
+
+# 本地配置文件
+config.local.json
+
+# 证书和密钥
+*.pem
+*.key
+*.cert 
