@@ -1,0 +1,71 @@
+{
+  "capabilities": {
+    "resources": {
+      "subscribe": true,
+      "listChanged": true
+    },
+    "tools": {
+      "listChanged": true
+    },
+    "prompts": {
+      "listChanged": true
+    }
+  },
+  "server": {
+    "name": "MCP即插即用服务器",
+    "version": "0.1.0",
+    "description": "基于MCP协议的即插即用服务器框架"
+  },
+  "plugins": {
+    "resources": [
+      {
+        "name": "file_resource",
+        "enabled": true,
+        "config": {
+          "base_dir": "./data",
+          "allowed_extensions": [".txt", ".md", ".json", ".yaml", ".yml"]
+        }
+      }
+    ],
+    "tools": [
+      {
+        "name": "bash_executor",
+        "enabled": true,
+        "config": {
+          "allowed_commands": ["ls", "cat", "echo", "grep", "find", "pwd", "mkdir", "touch"]
+        }
+      },
+      {
+        "name": "file_editor",
+        "enabled": true,
+        "config": {}
+      },
+      {
+        "name": "web_search",
+        "enabled": true,
+        "config": {
+          "default_engine": "google",
+          "max_results": 5,
+          "timeout": 15
+        }
+      }
+    ],
+    "prompts": [
+      {
+        "name": "openmanus",
+        "enabled": true,
+        "config": {}
+      }
+    ],
+    "samplers": [
+      {
+        "name": "custom_sampler",
+        "enabled": true,
+        "config": {
+          "default_temperature": 0.7,
+          "default_max_tokens": 1000
+        }
+      }
+    ]
+  }
+} 
